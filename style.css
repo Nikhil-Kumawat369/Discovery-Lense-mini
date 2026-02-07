@@ -20,6 +20,9 @@ body {
 }
 
 #maskingLayer {
+    will-change : mask-position ;
+    -webkit-will-change : mask-position ;
+    transform : translateZ(0) ;
     min-height : 100vh ;
     min-width : 100vw ;
     background-image : url("/Discovery-Lense-mini/Images/map.png") ;
@@ -27,14 +30,16 @@ body {
     background-repeat : no-repeat ;
     position : absolute ;
     z-index : 1.2 ;
-    mask-image : url("/Discovery-Lense-mini/Images/circle-svgrepo-com.svg") ;
-    mask-size : 15% ;
+    mask-image : url("/Discovery-Lense-mini/Images/circle.svg") ;
+    mask-size : 27% 27% ;
     mask-repeat : no-repeat ;
-    mask-position : 530px 330px ;
-    animation : figureEightGlass 10s ease-in-out 0s infinite normal ;
+    mask-position : 2vw 20vh ;
+    animation : hoveringGlass 20s ease-in-out 0s infinite normal ;
 }
 
 #magnifyingGlassBluePrint {
+    will-change : transform ;
+    -webkit-will-change : transform ;
     min-height : 100vh ;
     min-width : 100vw ;
     position : absolute ;
@@ -42,26 +47,37 @@ body {
     background-image : url("/Discovery-Lense-mini//Images/magnifyingGlass.png") ;
     background-size : 60vh auto ;
     background-repeat : no-repeat ;
-    background-position : center ;
-    animation : figureEight 10s ease-in-out 0s infinite normal ;
+    background-position : 5vw 5vh ;
+    animation : hoveringMagnifyingGlass 20s ease-in-out 0s infinite normal ;
 }
 
-/*This animation moves the magnifying glass in ∞ path so its name is figureEight*/
-@keyframes figureEight {
-    0%   { transform: translate(0px, 0px); }
-    25%  { transform: translate(60px, -30px); }
-    50%  { transform: translate(0px, 0px); }
-    75%  { transform: translate(-60px, 30px); }
-    100% { transform: translate(0px, 0px); }
+/* Magnifying glass movement */
+@keyframes hoveringMagnifyingGlass {
+  0%   { transform: translate(0vw, 0vh); }
+  10%  { transform: translate(5vw, 10vh); }
+  20%  { transform: translate(40vw, 7.5vh); }
+  30%  { transform: translate(15vw, 40vh); }
+  40%  { transform: translate(45vw, 30vh); }
+  50%  { transform: translate(2.5vw, 45vh); }
+  60%  { transform: translate(35vw, 20vh); }
+  70%  { transform: translate(10vw, 5vh); }
+  80%  { transform: translate(47.5vw, 47.5vh); }
+  90%  { transform: translate(20vw, 15vh); }
+  100% { transform: translate(0vw, 0vh); }
 }
 
-@keyframes figureEightGlass {
-    0% {mask-position : 530px 330px ;}
-    25% {mask-position : 590px 300px ;}
-    50% {mask-position : 530px 330px ;}
-    75% {mask-position : 470px 360px ;}
-    100% {mask-position : 530px 330px ;}
+/* Glass mask movement (kept perfectly aligned) */
+@keyframes hoveringGlass {
+    0%   { mask-position: 2vw 20vh; }
+    10%  { mask-position: 7vw 30vh; }
+    20%  { mask-position: 42vw 27.5vh; }
+    30%  { mask-position: 17vw 60vh; }
+    40%  { mask-position: 47vw 50vh; }
+    50%  { mask-position: 4.5vw 65vh; }
+    60%  { mask-position: 37vw 40vh; }
+    70%  { mask-position: 12vw 25vh; }
+    80%  { mask-position: 49.5vw 67.5vh; }
+    90%  { mask-position: 22vw 35vh; }
+    100% { mask-position: 2vw 20vh; }
 }
-
-
 
