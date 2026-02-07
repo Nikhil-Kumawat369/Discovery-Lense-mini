@@ -16,7 +16,7 @@ It is aggressively specific about screen size.
 ## 🌐 Live Demo
 
 🔗 **Deployed here:**  
-https:/link here
+[https:/link here](https://nikhil-kumawat369.github.io/Discovery-Lense-mini/)
 
 ### 🚫 Important Note Before You Click
 
